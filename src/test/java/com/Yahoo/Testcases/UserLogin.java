@@ -8,7 +8,7 @@ import com.Yahoo.Pages.YahooLoginPage;
 public class UserLogin extends TestBase {
 	YahooLoginPage LoginPageObj;
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void UsernameLoginCorrectly() {
 		LoginPageObj = new YahooLoginPage(driver);
 		LoginPageObj.UserNameLogin("testtask54");

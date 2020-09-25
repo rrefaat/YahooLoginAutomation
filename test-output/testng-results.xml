@@ -1,21 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
+<testng-results ignored="4" total="6" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-09-25T22:18:05 EET" name="Default suite" finished-at="2020-09-25T22:18:15 EET" duration-ms="9762">
+  <suite started-at="2020-09-26T00:59:26 EET" name="Default suite" finished-at="2020-09-26T01:00:00 EET" duration-ms="34196">
     <groups>
     </groups>
-    <test started-at="2020-09-25T22:18:05 EET" name="Default test" finished-at="2020-09-25T22:18:15 EET" duration-ms="9762">
+    <test started-at="2020-09-26T00:59:26 EET" name="Default test" finished-at="2020-09-26T01:00:00 EET" duration-ms="34196">
       <class name="com.Yahoo.Testcases.UserLogin">
-        <test-method is-config="true" signature="intiatDriver()[pri:0, instance:com.Yahoo.Testcases.UserLogin@71c3b41]" started-at="2020-09-25T22:17:52 EET" name="intiatDriver" finished-at="2020-09-25T22:18:05 EET" duration-ms="12851" status="PASS">
+        <test-method is-config="true" signature="intiatDriver()[pri:0, instance:com.Yahoo.Testcases.UserLogin@51a9ad5e]" started-at="2020-09-26T00:59:15 EET" name="intiatDriver" finished-at="2020-09-26T00:59:26 EET" duration-ms="10959" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intiatDriver -->
-        <test-method signature="UsernamePasswdLoginFail()[pri:0, instance:com.Yahoo.Testcases.UserLogin@71c3b41]" started-at="2020-09-25T22:18:05 EET" name="UsernamePasswdLoginFail" finished-at="2020-09-25T22:18:15 EET" duration-ms="9617" status="PASS">
+        <test-method signature="UsernameLoginCorrectly()[pri:0, instance:com.Yahoo.Testcases.UserLogin@51a9ad5e]" started-at="2020-09-26T00:59:26 EET" name="UsernameLoginCorrectly" finished-at="2020-09-26T00:59:31 EET" duration-ms="4665" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UsernameLoginCorrectly -->
+        <test-method signature="UsernamePasswdLoginFail()[pri:0, instance:com.Yahoo.Testcases.UserLogin@51a9ad5e]" started-at="2020-09-26T00:59:31 EET" name="UsernamePasswdLoginFail" finished-at="2020-09-26T01:00:00 EET" duration-ms="28708" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Cannot locate an element using id=login-username
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'EG5CG8352JJ4', ip: '192.168.1.18', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate an element using id=login-username
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'EG5CG8352JJ4', ip: '192.168.1.18', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at org.openqa.selenium.By$ById.findElement(By.java:188)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy20.sendKeys(Unknown Source)
+at com.Yahoo.Pages.YahooLoginPage.UserNameLogin(YahooLoginPage.java:38)
+at com.Yahoo.Testcases.UserLogin.UsernamePasswdLoginFail(UserLogin.java:59)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- UsernamePasswdLoginFail -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:com.Yahoo.Testcases.UserLogin@71c3b41]" started-at="2020-09-25T22:18:15 EET" name="closeDriver" finished-at="2020-09-25T22:18:18 EET" duration-ms="3402" status="PASS">
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:com.Yahoo.Testcases.UserLogin@51a9ad5e]" started-at="2020-09-26T01:00:01 EET" name="closeDriver" finished-at="2020-09-26T01:00:04 EET" duration-ms="2924" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->

@@ -5,7 +5,7 @@
     <classes>
       <class name="com.Yahoo.Testcases.UserLogin">
         <methods>
-          <include name="UsernameLoginCorrectly"/>
+          <include name="UsernamePasswdLoginFail"/>
           <include name="closeDriver"/>
           <include name="intiatDriver"/>
         </methods>

@@ -4,14 +4,14 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
 public class TestBase {
 
 	public static WebDriver driver;
 
-	@BeforeSuite
+	@BeforeTest
 	public void intiatDriver() {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
 		driver = new ChromeDriver();
@@ -20,7 +20,7 @@ public class TestBase {
 		driver.navigate().to("https://login.yahoo.com/");
 	}
 
-	@AfterSuite
+	@AfterTest
 	public void closeDriver() {
 		driver.quit();
 	}
